@@ -23,7 +23,7 @@ export default function Home() {
 
             <Card
               title="depoc api"
-              description={["api created for depoc with", "python & django."]}
+              description={["the depoc api build using", "python & django."]}
               year="2024"
               where="depoc/br"
               githubURL="https://github.com/depoc/api"
@@ -34,7 +34,10 @@ export default function Home() {
 
             <Card
               title="depopy"
-              description={["depoc python library"]}
+              description={[
+                "a python library that simplifies",
+                "requests to the depoc api.",
+              ]}
               year="2024"
               where="depoc/br"
               githubURL="https://github.com/depoc/depopy"
@@ -43,14 +46,15 @@ export default function Home() {
             />
 
             <Card
-              title="depoc frontend"
+              title="depox / mvp"
               description={[
-                "web ui using next.js & typescript",
-                "fetching depoc api data.",
+                "first depoc mvp build with django,",
+                "leveraging the template system and dtl.",
               ]}
-              year="[under development]"
+              year="2024"
               where="depoc/br"
-              githubURL="https://github.com/depoc/frontend"
+              githubURL="https://github.com/depoc/depox"
+              externalURL="https://github.com/depoc"
               bg="bg-secondary"
               text="text-primary"
             />
