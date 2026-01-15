@@ -3,8 +3,8 @@ import Card from "@/components/card";
 export default function Home() {
   return (
     <main>
-      <div className="grid grid-cols-2 mt-16 items-center justify-between">
-        <p className={`ml-1 text-2xl sm:text-6xl text-start`}>PROJECTS</p>
+      <div className="grid grid-cols-2 mt-14 items-center justify-between">
+        <p className={`ml-1 text-4xl sm:text-6xl text-start`}>projects</p>
       </div>
       <div className="overflow-hidden">
         <div className="overflow-auto flex">
@@ -28,8 +28,6 @@ export default function Home() {
               where="depoc/br"
               githubURL="https://github.com/depoc/api"
               externalURL="https://documenter.getpostman.com/view/40473934/2sBXVfkC3U"
-              bg="bg-secondary"
-              text="text-primary"
             />
 
             <Card
@@ -41,8 +39,6 @@ export default function Home() {
               year="2024"
               where="depoc/br"
               githubURL="https://github.com/depoc/depopy"
-              bg="bg-secondary"
-              text="text-primary"
             />
 
             <Card
@@ -55,11 +51,25 @@ export default function Home() {
               where="depoc/br"
               githubURL="https://github.com/depoc/depox"
               externalURL="https://github.com/depoc"
-              bg="bg-secondary"
-              text="text-primary"
             />
           </div>
         </div>
+      </div>
+      <div className="flex justify-end mt-5 gap-2">
+        <a
+          href="https:github.com/hugobelem"
+          target="_blank"
+          className="ml-1 text-xs"
+        >
+          github
+        </a>
+        <a
+          href="https://www.linkedin.com/in/hugobelem"
+          target="_blank"
+          className="ml-1 text-xs"
+        >
+          linkedin
+        </a>
       </div>
     </main>
   );
