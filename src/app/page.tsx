@@ -57,7 +57,7 @@ export default function Home() {
       </div>
       <div className="flex justify-end mt-5 gap-2">
         <a
-          href="https:github.com/hugobelem"
+          href="https://github.com/hugobelem"
           target="_blank"
           className="ml-1 text-xs"
         >
