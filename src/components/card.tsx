@@ -1,3 +1,5 @@
+import { quicksand } from "@/app/fonts";
+
 interface CardProps {
   title: string;
   description: string[];
@@ -16,16 +18,18 @@ export default function Card({
   where,
   githubURL,
   externalURL,
-  bg = "bg-primary",
-  text = "text-white",
+  bg = "bg-secondary/20",
+  text = "text-primary/75",
 }: CardProps) {
   return (
     <div
-      className={`relative min-w-77.25 min-h-112.5 sm:min-w-100 sm:min-h-125 shrink-0 rounded-md ring-1 ring-secondary ${bg}`}
+      className={`relative min-w-77.25 min-h-112.5 sm:min-w-100 sm:min-h-125 shrink-0 rounded-md shadow-lg ${bg} hover:bg-secondary/10`}
     >
-      <p className={`absolute top-4 left-4 text-4xl ${text}`}>{title}</p>
+      <p className={`absolute top-4 left-4 text-xl ${text}`}>{title}</p>
 
-      <p className={`absolute top-14 left-4 text-xs ${text}`}>
+      <p
+        className={`absolute top-14 left-4 pr-2 sm:pr-0 text-4xl sm:text-5xl font-light ${text} ${quicksand.className}`}
+      >
         {description.map((line, i) => (
           <span key={i} className="block">
             {line}
@@ -36,7 +40,12 @@ export default function Card({
       <p className={`absolute bottom-4 left-4 text-sm ${text}`}>
         {year} • {where}
       </p>
-      <div className={`grid ${externalURL ? "grid-cols-2" : "grid-cols-1"} absolute bottom-5 right-4 gap-4`}>
+
+      <div
+        className={`grid ${
+          externalURL ? "grid-cols-2" : "grid-cols-1"
+        } absolute bottom-5 right-4 gap-4`}
+      >
         <a href={githubURL} target="_blank" className={`text-4xl ${text}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +63,11 @@ export default function Card({
             <path d="m14.5 4-5 16" />
           </svg>
         </a>
-        <a href={externalURL} target="_blank" className={`text-4xl ${text} ${!externalURL && "hidden"}`}>
+        <a
+          href={externalURL}
+          target="_blank"
+          className={`text-4xl ${text} ${!externalURL && "hidden"}`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
