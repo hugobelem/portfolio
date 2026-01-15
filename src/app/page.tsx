@@ -50,7 +50,7 @@ export default function Home() {
               year="2024"
               where="depoc/br"
               githubURL="https://github.com/depoc/depox"
-              externalURL="https://github.com/depoc"
+              externalURL="https://mvp.depoc.com.br"
             />
           </div>
         </div>
