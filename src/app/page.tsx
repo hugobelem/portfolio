@@ -27,7 +27,7 @@ export default function Home() {
               year="2024"
               where="depoc/br"
               githubURL="https://github.com/depoc/api"
-              externalURL="https://documenter.getpostman.com/view/40473934/2sBXVfkC3U"
+              externalURL="/depoc"
             />
 
             <Card

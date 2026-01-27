@@ -8,6 +8,10 @@
   --color-background: #f4f3eeff;
 }
 
+@utility code {
+  @apply p-1 rounded-md bg-secondary/20 font-mono text-xs;
+}
+
 @utility scrollbar-hidden {
   &::-webkit-scrollbar {
     display: none;
