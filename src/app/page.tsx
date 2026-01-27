@@ -9,7 +9,7 @@ export default function Home() {
       <div className="overflow-hidden">
         <div className="overflow-auto flex">
           <div className="overflow-x-auto scrollbar-hidden flex px-1 pt-1 pb-5 gap-4 font-bold">
-            <Card
+            {/* <Card
               title="space chicken"
               description={[
                 "game created with javascript &",
@@ -19,7 +19,7 @@ export default function Home() {
               where="college"
               githubURL="https://github.com/hugobelem/gold"
               externalURL="https://hugobelem.github.io/gold/"
-            />
+            /> */}
 
             <Card
               title="depoc api"
@@ -41,7 +41,7 @@ export default function Home() {
               githubURL="https://github.com/depoc/depopy"
             />
 
-            <Card
+            {/* <Card
               title="depox / mvp"
               description={[
                 "first depoc mvp build with django,",
@@ -51,7 +51,7 @@ export default function Home() {
               where="depoc/br"
               githubURL="https://github.com/depoc/depox"
               externalURL="https://mvp.depoc.com.br"
-            />
+            /> */}
           </div>
         </div>
       </div>
