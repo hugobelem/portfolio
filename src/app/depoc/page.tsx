@@ -1,8 +1,8 @@
 const userData = {
   user: {
     id: "01JM68P43G7QPHF07X67P0REAS",
-    name: "Hugo Belém",
-    email: "hugobelem@depoc.com.br",
+    name: "Hugo",
+    email: "hugo@acoh.com.br",
     username: "hugo",
     is_active: true,
     is_staff: true,
@@ -428,7 +428,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         200
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         Successfully processed the request.
                       </td>
                     </tr>
@@ -436,7 +436,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         201
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         Resource created Successfully.
                       </td>
                     </tr>
@@ -444,7 +444,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         204
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         Request succeeded, no data returned.
                       </td>
                     </tr>
@@ -472,7 +472,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         400
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         • Validation error.
                         <br />
                         • Invalid request.
@@ -485,7 +485,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         401
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         The bearer token is not valid.
                       </td>
                     </tr>
@@ -493,7 +493,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         403
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         Client doesn't have permission to perform this
                         operation.
                       </td>
@@ -510,7 +510,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         405
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         Method not allowed.
                       </td>
                     </tr>
@@ -518,7 +518,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         429
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         This request exceeds the number of requests allowed.
                       </td>
                     </tr>
@@ -526,7 +526,7 @@ export default function Depoc() {
                       <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         500
                       </td>
-                      <td className="p-2 ring-1 ring-secondary/50 rounded-md text-nowrap">
+                      <td className="p-2 ring-1 ring-secondary/50 rounded-md">
                         An unexpected error occurred.
                       </td>
                     </tr>
@@ -594,8 +594,49 @@ export default function Depoc() {
                   <button className="px-1 mb-1.5 ring-1 ring-secondary/25 rounded-md cursor-pointer bg-secondary/15">
                     200
                   </button>
+                </div>
+              </div>
+
+              <div className="p-2 ring-1 normal-case ring-secondary/50 rounded-md bg-secondary/15 overflow-scroll">
+                <span className="code">json</span>
+                <div className="mt-1">
+                  <span className="code bg-secondary/0">
+                    <pre>{colorizeJSON(userData)}</pre>
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <article className="sm:mr-40">
+              <p className="mt-10 text-lg text-start">
+                <span className="code text-lg">POST</span> create account
+              </p>
+              <span className="code normal-case">
+                https://api.acoh.com.br/accounts
+              </span>
+
+              <p className="mt-4">request</p>
+              <div className="p-2 ring-1 normal-case ring-secondary/50 rounded-md bg-secondary/15">
+                <span className="code">curl</span>
+                <div className="mt-4">
+                  <pre className="code text-[#618B25] bg-secondary/0">
+                    {`curl -X POST https://api.acoh.com.br/accounts \\
+  -H "Authorization: Bearer TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "nome": "Hugo",
+    "email": "hugo@acoh.com.br",
+    "username": "hugo"
+  }'`}
+                  </pre>
+                </div>
+              </div>
+
+              <div className="px-1 flex justify-between items-end relative w-full">
+                <p className="mt-8">response</p>
+                <div className="flex gap-2 text-sm text-primary/90">
                   <button className="px-1 mb-1.5 ring-1 ring-secondary/25 rounded-md cursor-pointer bg-secondary/15">
-                    400
+                    200
                   </button>
                 </div>
               </div>
